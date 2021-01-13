@@ -24,6 +24,7 @@ collections:
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Hero", name: "hero", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Comments", name: "comments", widget: "boolean" }
   - name: "authors"
     label: "Authors"
     folder: "content/authors/authors"
