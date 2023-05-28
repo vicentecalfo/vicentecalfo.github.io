@@ -16,8 +16,16 @@ const discussUrl = (slug) =>
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
+function ThinLineHTML(thinLine) {
+  return (
+    <p className="mb-12 border-l-8 border-teal-600 bg-gray-50 p-6 dark:bg-gray-800">{thinLine}</p>
+  )
+}
+
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, images, tags } = frontMatter
+  const { slug, fileName, date, title, images, tags, readingTime, thinLine } = frontMatter
+
+  console.log(frontMatter)
 
   return (
     <SectionContainer>
@@ -30,7 +38,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
-            <div className="space-y-1 text-center">
+            <div className="space-y-1 text-left">
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
@@ -51,6 +59,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <dl className="pt-6 pb-10 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
+              <dt className="sr-only">Tempo de leitura</dt>
+              <dd className="mb-6 text-xs">{Math.ceil(readingTime.minutes)} minutos de leitura.</dd>
               <dt className="sr-only">Autores</dt>
               <dd>
                 <ul className="flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
@@ -86,7 +96,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
+                {thinLine ? ThinLineHTML(thinLine) : ''}
+                {children}
+              </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}

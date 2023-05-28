@@ -5,18 +5,17 @@ const siteMetadata = {
   description: 'Um blog sobre desenvolvimento de sistemas.',
   language: 'pt-br',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://vicentecalfo.github.io',
+  siteRepo: 'https://github.com/vicentecalfo/vicentecalfo.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  locale: 'en-US',
+  socialBanner: '',
+  github: 'https://github.com/vicentecalfo',
+  twitter: null,
+  facebook: null,
+  youtube: null,
+  linkedin: 'https://www.linkedin.com/in/vicentecalfo',
+  locale: 'pt-BR',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -30,7 +29,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: '', //buttondown
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
