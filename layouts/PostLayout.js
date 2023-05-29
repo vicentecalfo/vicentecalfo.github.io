@@ -98,7 +98,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 {thinLine ? ThinLineHTML(thinLine) : ''}
                 {children}
               </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="hidden pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>

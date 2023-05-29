@@ -20,7 +20,7 @@ export default function FourZeroFour() {
             Mas não se preocupe, você pode encontrar outras publicações na página inicial.
           </p>
           <Link href="/">
-            <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500">
+            <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-teal-700 focus:outline-none dark:hover:bg-teal-500">
               Voltar para página inicial
             </button>
           </Link>
