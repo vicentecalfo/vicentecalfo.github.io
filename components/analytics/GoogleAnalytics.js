@@ -6,7 +6,7 @@ const GAScript = () => {
   return (
     <>
       <Script
-        strategy="lazyOnload"
+        strategy="beforeInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${siteMetadata.analytics.googleAnalyticsId}`}
       />
 
