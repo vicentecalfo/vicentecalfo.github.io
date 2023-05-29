@@ -25,8 +25,6 @@ function ThinLineHTML(thinLine) {
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, images, tags, readingTime, thinLine } = frontMatter
 
-  console.log(frontMatter)
-
   return (
     <SectionContainer>
       <BlogSEO
