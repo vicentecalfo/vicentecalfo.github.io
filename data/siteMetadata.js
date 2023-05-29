@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'Um blog sobre desenvolvimento de sistemas.',
   language: 'pt-br',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://vicentecalfo.github.io',
+  siteUrl: 'https://vicentecalfo.vercel.app',
   siteRepo: 'https://github.com/vicentecalfo/vicentecalfo.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
@@ -23,7 +23,7 @@ const siteMetadata = {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    googleAnalyticsId: 'G-ZWR3W7667J', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
   },
   newsletter: {
