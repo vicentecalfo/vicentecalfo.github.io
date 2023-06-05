@@ -12,7 +12,7 @@ const ContentSecurityPolicy = `
   connect-src *;
   font-src 'self';
   frame-src https://giscus.app;
-  frame-ancestors  'self' https://giscus.app;
+  frame-ancestors 'self' https://giscus.app;
 `
 
 const securityHeaders = [
