@@ -36,7 +36,7 @@ const Giscus = () => {
     script.setAttribute('data-repo-id', repositoryId)
     script.setAttribute('data-category', category)
     script.setAttribute('data-category-id', categoryId)
-    script.setAttribute('data-mapping', 'pathname')
+    script.setAttribute('data-mapping', 'specific')
     //script.setAttribute('data-mapping', mapping)
     script.setAttribute('data-reactions-enabled', reactions)
     script.setAttribute('data-emit-metadata', metadata)
