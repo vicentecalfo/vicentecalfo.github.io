@@ -11,8 +11,8 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self';
-  frame-src 'self' https://giscus.app;
-  frame-ancestors 'self' https://giscus.app;
+  frame-src 'self' https://*.app;
+  frame-ancestors 'self' https://*.app;
 `
 
 const securityHeaders = [
