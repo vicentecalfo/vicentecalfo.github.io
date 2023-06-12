@@ -1,0 +1,170 @@
+---
+title: 'A busca pelo código limpo: Reflexões de um desenvolvedor comum'
+date: '2023-03-16'
+tags: ['clean code']
+draft: false
+summary: 'Apesar dos desafios, implementar código limpo diariamente traz benefícios, como economia de tempo, códigos mais robustos e crescimento profissional.'
+thinLine: 'Além da teoria: a batalha diária para implementar código limpo requer paciência e determinação.'
+---
+
+# O que é código limpo?
+
+Você já deve estar farto de saber o que é código limpo, e talvez já tenha até mergulhado nas páginas sagradas do livro do "tio Bob" ([Robert C. Martin](http://cleancoder.com/products)) sobre o assunto (Clean Code). Mas vamos situar aqueles que ainda estão meio perdidos: código limpo é como aquela casinha arrumada que dá um prazer "danado", onde cada coisa tem seu lugar e você não precisa ficar revirando tudo feito um louco. É um código organizadinho, fácil de entender e manter, o sonho de qualquer virginiano.
+
+Só que, meus caros mortais, manter uma casa arrumada dá trabalho, exige disciplina e persistência. Às vezes, no turbilhão do dia a dia, a gente se pergunta se não dá pra deixar as coisas jogadas, né? Parece que dá menos trabalho. Mas aí, quando chega uma visita surpresa ou quando você precisa achar algo rapidinho numa emergência, pronto: a bagunça te faz pagar o preço!
+
+E olha só, a mesma coisa acontece com o tal código limpo! No começo, você pode achar que não faz diferença, que dá pra deixar aquele caos de variáveis sem sentido e funções gigantescas espalhadas por aí. Mas aí chega o momento em que você precisa se entender com o seu próprio código ou fazer uma manutenção urgente, e é aí que você acaba se tocando!
+
+Manter o código organizado e limpinho é como ter uma casa arrumada: depois de um tempo, você percebe que é muito menos doloroso do que ficar arrumando tudo toda hora. Além disso, evita aquele acúmulo de coisas desnecessárias, tipo variáveis abandonadas e trechos repetitivos que só confundem a cabeça. Então, meus amigos, vale a pena investir um tempinho e esforço na limpeza do seu código, porque no final das contas, você vai agradecer por não estar lavando e passando roupas que nem servem mais, se é que você me entende!
+
+# Quando minha ficha caiu
+
+Antes de me tornar um desenvolvedor de verdade, eu era um designer gráfico. Eu manjava um pouco de HTML, CSS e JavaScript, lááá no passado distante, quando Fireworks, Flash e Dreamweaver dominavam a cena (sim, já dá pra ter uma ideia da minha idade). Naquela época, eu só precisava cuidar dos meus projetinhos pequenos e, se funcionava e não explodia meu computador, eu já me dava por satisfeito.
+
+Mas aí, meu caro amigo, a coisa mudou. Encarei sistemas maiores e mais responsabilidades, e aí a coisa ficou séria. Descobri que não estava preparado para escrever código nessa nova realidade. E o pior de tudo: meus coleguinhas de baia também estavam na mesma. Quando chegou a primeira manutenção, o castelo de cartas desabou e a crise de ansiedade veio com força total. Tudo deu M... Meu código precisava de uma reforma urgente!
+
+Mas agora vocês devem estar pensando: "Ah, mas depois disso tudo, o cara deve ter aprendido a lição, encontrado o tio Bob e o Clean Code, e se tornado um mestre da organização, certo?" Errado! O tal do "Clean Code" foi lançado em 2009, e o que estou contando aqui aconteceu lááá em 2006... ou talvez em 2007. A ficha caiu, mas a atitude não veio. Eu nem sabia por onde começar para resolver meu problema. Pior ainda, achava que sofrer fazia parte do trabalho de um desenvolvedor. Eu estava resignado com a minha sina. Cada nova manutenção era uma batalha suada, uma mistura de orações e delicadeza. Eu me sentia como um agente do esquadrão anti-bombas. Corto o fio azul ou o vermelho? Decisões difíceis, minha gente!
+
+O tempo foi passando, alguns caras mais experientes e espertos foram nos dando dicas e fomos melhorando aos poucos. Mas vamos ser sinceros, estávamos longe de atingir a perfeição. Nossos avanços eram como os passos de uma tartaruga, bem devagarinho.
+
+E eu sei que mesmo com toda essa "hype" em torno do código limpo, muitos desenvolvedores passam por isso, especialmente aqueles que lidam com sistemas antigos que são verdadeiros "dinossauros". É meio maluco revisitar o passado com a cabeça e o conhecimento que temos hoje, mas o trabalho precisa ser feito. Nem sempre dá pra destruir a cidade pra salvar a cidade, como os japoneses enlatados super-heróis nos ensinaram lá nos idos de 90. Então, vamos encarar pequenas refatorações diárias e comemorar as pequenas vitórias ao longo do caminho.
+
+# A importância do código limpo
+
+É claro que em algum momento decidi buscar maneiras de aprimorar minha habilidade de escrever código, organizar melhor meu trabalho e alcançar uma melhor qualidade de vida. Nessa jornada, compreendi a importância do código limpo e por que é essencial implementá-lo.
+
+O código limpo é um recurso valioso, pois sua legibilidade, compreensão e facilidade de modificação tornam o trabalho mais eficiente e eficaz, garantindo a sustentabilidade do código. Como resultado, encontrar e corrigir bugs, bem como adicionar novos recursos, torna-se uma tarefa mais fácil sem causar interrupções no código existente.
+
+Além disso, o código limpo possui outra vantagem: é altamente reutilizável. Com sua organização e clareza, você pode aproveitá-lo em outros projetos ou compartilhá-lo com outras pessoas. Isso torna sua jornada mais fluida e produtiva. Agora, vou compartilhar algumas dicas simples que podem fazer uma grande diferença. Claro, o assunto do código limpo é amplo e complexo, exigindo muitas discussões e estudos para abordar todas as boas práticas. No entanto, meu objetivo aqui é focar em dicas rápidas que exigem pouco esforço e uma mudança de comportamento gradual para começar a implementar. O foco deste post é mostrar como um desenvolvedor comum pode começar a escrever códigos melhores imediatamente. E aqui está uma coisa que muitas pessoas não mencionam: tudo isso requer a criação de hábitos.
+
+## Como escrever um bom código
+
+Bater o martelo e definir o que é bom ou ruim quando se trata de escrever código pode ser intimidante. É como escolher entre pizza de abacaxi (polêmica) e pizza de calabresa (escolha sensata). Mas algumas coisas são como aquele molho caseiro e uma dose extra de mussarela de qualidade: as boas práticas. Elas são como um guia confiável que nos ajuda a escrever código claro, organizado e eficiente, sem levar nossos colegas de equipe à beira de um ataque de nervos. Portanto, embora cada um tenha suas preferências e estilos únicos, podemos concordar que seguir algumas dessas práticas é uma jogada inteligente para manter nossa sanidade mental e evitar que o código se transforme em um monstro incontrolável.
+
+### Nomes descritivos
+
+É ótimo quando encontro um código cheio de nomes descritivos para variáveis e funções. Antes mesmo de entender a lógica por trás do código, já consigo ter uma ideia do que está acontecendo só pelos nomes utilizados. Quando os nomes são claros e autoexplicativos, ler e entender o código fica muito mais fácil. Não é preciso comentários extras, já que o propósito das variáveis, por exemplo, é evidente pelos nomes utilizados. Comentários nem sempre garantem a clareza e a documentação do código. Na verdade, muitos comentários explicando o funcionamento podem ser desnecessários.
+
+Outra coisa que sempre evito e peço encarecidamente que meus colegas e alunos também evitem são as abreviações e acrônimos (a menos que sejam amplamente conhecidos). Ao usar palavras e frases completas, tornamos as coisas mais compreensíveis e não precisamos de explicações adicionais, que normalmente são feitas por meio de comentários, como mencionei antes.
+
+```JavaScript
+// Código com nomes não declarativos relacionados a um cálculo de frete
+function calcFrete(p, d) {
+  const f = p * 2.5 + d * 0.1;
+  return f >= 100 ? true : false;
+}
+```
+
+```JavaScript
+// Código refatorado com nomes declarativos relacionados ao cálculo de frete
+function calcularValorFrete(pesoProduto, distanciaEntrega) {
+  const valorFretePorKg = 2.5;
+  const taxaDistancia = 0.1;
+  const valorFrete = pesoProduto * valorFretePorKg + distanciaEntrega * taxaDistancia;
+  return valorFrete.toFixed(2);
+}
+
+```
+
+No primeiro código, minha mente de desenvolvedor fica confusa e preciso adivinhar o que as variáveis significam. Por exemplo, olhando para "calcFrete", posso intuir que tem algo a ver com cálculos, mas o que p e d representam? Parece um código codificado! Imagina se tivéssemos várias funções assim espalhadas pelo sistema.
+
+Mas, quando damos um "tapa" no código, tudo se ilumina e a confusão some! Agora, temos a função "calcularValorFrete" com um nome descritivo. Ah, agora sim! O nome diz tudo! Sabemos que essa belezinha de código é responsável por calcular o valor do frete. E não é só isso! Ela recebe parâmetros super amigáveis: pesoProduto e distanciaEntrega.
+
+Com essa mudança mágica, tudo fica claro como água cristalina. O código ganha um novo significado e podemos entender perfeitamente o papel dessa função no fluxo geral. Além disso, se precisarmos lidar com o cálculo de frete em algum momento, já temos uma base sólida para trabalhar!
+
+Essa refatoração é como um passe de mágica, transformando um código enigmático em algo muito mais legível e compreensível. É simples e não causa dor, mas faz uma grande diferença no nosso dia a dia.
+
+## Funções devem apenas fazer uma coisa
+
+Lembre-se, ao escrever funções, o segredo está em manter um propósito específico para cada uma delas. Essa abordagem é como a estratégia "dividir e conquistar". Dessa forma, você evita que o código se torne gigante e confuso, tornando-o mais organizado, testável e reutilizável.
+
+Cada função deve brilhar em seu próprio papel, desempenhando uma única tarefa de forma excelente. Isso significa que ela deve ter um propósito claro e específico, sem a presença de código desnecessário ou supérfluo. Lembre-se de que funções bem projetadas facilitam o processo de teste, depuração e reutilização em diferentes partes do código.
+
+Afinal, ter funções bem definidas é como ter um time de especialistas trabalhando juntos para alcançar um objetivo comum. Cada função desempenha seu papel de forma eficiente e, quando todas elas estão sincronizadas, o código se torna harmonioso e fácil de trabalhar.
+
+Portanto, divida suas tarefas em funções menores, concentre-se em um propósito claro para cada uma delas e desfrute dos benefícios de um código mais organizado, testável e reutilizável. Você verá como essa abordagem simplifica o desenvolvimento e torna sua vida como desenvolvedor muito mais tranquila.
+
+```JavaScript
+function processarDados() {
+  // Lógica para processar os dados de entrada
+  // ...
+  // Lógica para cálculo dos descontos
+  // ...
+  // Lógica para atualizar o banco de dados
+  // ...
+  // Lógica para enviar um e-mail de confirmação
+  // ...
+  // Lógica para gerar um relatório
+  // ...
+}
+```
+
+```JavaScript
+function processarDadosEntrada(dados) {
+  // Lógica para processar os dados de entrada
+  // ...
+  return dadosProcessados;
+}
+
+function calcularDescontos(dados) {
+  // Lógica para cálculo dos descontos
+  // ...
+  return dadosComDescontos;
+}
+
+function atualizarBancoDados(dados) {
+  // Lógica para atualizar o banco de dados
+  // ...
+  return statusAtualizacao;
+}
+
+function enviarEmailConfirmacao(dados) {
+  // Lógica para enviar um e-mail de confirmação
+  // ...
+  return statusEnvioEmail;
+}
+
+function gerarRelatorio(dados) {
+  // Lógica para gerar um relatório
+  // ...
+  return relatorio;
+}
+
+// Chamadas das funções separadas
+const dadosProcessados = processarDadosEntrada(dadosEntrada);
+const dadosComDescontos = calcularDescontos(dadosProcessados);
+const statusAtualizacao = atualizarBancoDados(dadosComDescontos);
+const statusEnvioEmail = enviarEmailConfirmacao(dadosComDescontos);
+const relatorio = gerarRelatorio(dadosComDescontos);
+```
+No código original, todas as etapas do processamento dos dados estão misturadas em uma única função. Isso torna o código difícil de entender, pois várias responsabilidades estão agrupadas.
+
+Na refatoração, as tarefas foram divididas em funções separadas, cada uma com um objetivo específico. Agora temos funções como processarDadosEntrada, calcularDescontos, atualizarBancoDados, enviarEmailConfirmacao e gerarRelatorio.
+
+Essa abordagem permite que cada função se concentre em sua tarefa específica, tornando o código mais claro, legível e fácil de dar manutenção. Além disso, as funções agora podem ser reutilizadas em outras partes do código, caso necessário.
+
+Ao chamar cada função separadamente, passando os dados relevantes, conseguimos criar um fluxo de código mais compreensível e organizado. Cada função tem uma responsabilidade específica, o que segue o Princípio da Responsabilidade Única (Single Responsibility Principle) dos princípios [SOLID](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html).
+
+## Evite repetições
+
+Repetir código é um verdadeiro pesadelo. Quando você se depara com o mesmo bloco de código aparecendo em vários cantos do sistema, a coisa vira uma bagunça. E pior ainda, isso gera uma baita de uma inconsistência, porque as mudanças que você faz provavelmente não vão ser aplicadas em todos os lugares onde o código foi repetido. É desesperador ver essas linhas de código se multiplicando sem parar.
+
+Isso tem tudo a ver com o princípio DRY (Don't Repeat Yourself - Não se Repita). Ou seja, é essencial manter apenas uma versão da funcionalidade, seja ela qual for. Não é só uma questão de evitar a repetição de código, mas também de criar contextos e conhecimentos que possam ser reutilizados de forma mais significativa.
+
+Por isso, quando você estiver programando e perceber que está usando um código parecido em mais de um lugar, pare e pense no que isso realmente significa pro sistema como um todo. Evitar a repetição não é só uma questão de deixar o código mais arrumadinho, mas também de criar um sistema mais organizado, consistente e fácil de manter.
+
+## Não é perfumaria
+
+Muita gente costuma dizer que o que vou falar agora é só "perfumaria", mas acredite em mim, vai muito além disso. Deixar o código mais legível e fácil de entender é uma responsabilidade fundamental de todo programador, na minha opinião. Afinal, passamos a maior parte do tempo lendo código, e não escrevendo. As técnicas que mencionei antes realmente ajudam a tornar o código mais legível para nós humanos, mas também é importante manter uma boa organização e estrutura no código. Isso inclui cuidar das indentações, espaços em branco e outros detalhes visuais. Esses cuidados refletem em uma leitura mais fluida, permitindo percorrer e navegar pelos blocos de texto de forma mais fácil.
+
+Outra dica importante é ser consistente na forma como escrevemos o código, criando hierarquias que façam sentido. É altamente recomendado sentar com a equipe e desenvolver um estilo de codificação que todos possam seguir. Dessa forma, vocês estarão trabalhando juntos para criar um código limpo e coerente.
+
+# Paciência e persistência
+
+Agora vou abordar um ponto crucial para a implementação dessas boas práticas que discutimos hoje, e também para qualquer aspecto de nossa carreira de desenvolvimento: precisamos ter uma grande dose de paciência e um pouco de controle sobre nossa ansiedade. Se você chegou até aqui, é provavelmente porque está buscando ou já está estudando e implementando código limpo em sua rotina profissional. No entanto, é importante lembrar que escrever código limpo requer uma habilidade que não é desenvolvida da noite para o dia, e nem sempre o ambiente profissional, com projetos e prazos, permitirá que você faça tudo da maneira que deseja.
+
+Tudo isso é parte do desenvolvimento e, por assim dizer, é um processo. Vai exigir seu tempo e pode se tornar cansativo em alguns momentos. No entanto, ao longo do tempo, você perceberá a diferença e as coisas se tornarão mais fluidas. Você se acostumará e fará as coisas certas sem nem perceber.
+
+Desenvolver no dia a dia, especialmente em projetos com equipes reduzidas, onde você desempenha o papel de três profissionais e seus colegas de trabalho também enfrentam a mesma situação, não é um ambiente fácil para implementar rapidamente códigos fáceis de ler, realizar refatorações com total segurança, mudar nomes de variáveis e funções, remover toneladas de comentários desnecessários, dividir o código em módulos e implementar convenções e padrões de codificação mais adequados. No início, nada disso será simples e pode parecer que não está economizando tempo, essa é a verdade.
+
+No entanto, quando as coisas ficarem apertadas e a urgência bater à porta, você perceberá que todo esse esforço, essa mudança de cultura e a criação de hábitos valeram a pena. Você verá que economizou tempo a longo prazo e escreveu um código mais robusto. Certamente, você terá evoluído profissionalmente.
